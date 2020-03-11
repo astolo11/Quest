@@ -54,6 +54,19 @@
                                     </span>
                                 @endif
                             </div>
+                            <div class="form-group{{ $errors->has('no_hp') ? ' has-danger' : '' }}">
+                                <div class="input-group input-group-alternative mb-3">
+                                    <div class="input-group-prepend">
+                                        <span class="input-group-text"><i class="ni ni-mobile-button"></i></span>
+                                    </div>
+                                    <input class="form-control{{ $errors->has('no_hp') ? ' is-invalid' : '' }}" placeholder="Nomor Hp" type="text" name="no_hp" required>
+                                </div>
+                                @if ($errors->has('no_hp'))
+                                    <span class="invalid-feedback" style="display: block;" role="alert">
+                                        <strong>{{ $errors->first('no_hp') }}</strong>
+                                    </span>
+                                @endif
+                            </div>
                             <div class="form-group{{ $errors->has('password') ? ' has-danger' : '' }}">
                                 <div class="input-group input-group-alternative">
                                     <div class="input-group-prepend">
